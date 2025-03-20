@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Malar-pred - FAQ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/tutorial_style.css') }}">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-container">
+        <div class="header">
+            <h1>
+                <img src="{{ url_for('static', filename='/images/logo.jpg') }}" alt="logo" class="header-logo">
+            </h1>
+            <button class="hamburger" aria-label="Toggle menu" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="myLinks">
+                <ul class="hamburger-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/predict">Predict</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/tutorial">Tutorial</a></li>
+                    <li><a href="/about">FAQ's</a></li>
+                </ul>
+            </div>
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict">Predict</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/tutorial">Tutorial</a></li>
+                <li><a href="/about">FAQ's</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h2>Getting started with Malar-pred</h3>
+
+            <section class="single">
+                <h3>Prediction of single molecule</h4>
+                    <div class="image-container">
+
+                        <p><span class="bold">Step 1:</span> go to predict page</p>
+                        <hr>
+                        <img src="../static/tutorial_images/1. Predict_button.png" alt="Upload_button"
+                            width="100%"></img>
+                        <p><span class="bold">Step 2:</span> enter your canonical smile into the text box</p>
+                        <hr>
+                        <img src="../static/tutorial_images/2. Input_smile.png" alt="canonical smile textbox"
+                            width="100%" />
+                        <p><span class="bold">Step 3:</span> select your model to use and click on submit button</p>
+                        <hr>
+                        <img src="../static/tutorial_images/3. select_model.png" alt="canonical smile textbox"
+                            width="100%" />
+                        <p><span class="bold">Step 4:</span> Result</p>
+                        <hr>
+                        <img src="../static/tutorial_images/4. results.png" alt="canonical smile textbox"
+                            width="100%" />
+                    </div>
+            </section>
+            <section class="csv">
+                <div class="image-container">
+
+                    <h3>For prediction of list of molecules</h4>
+                        <p>Note: the uploaded document should strictly be csv which contains only your smiles. There
+                            should
+                            be no
+                            headers in your csv file. <span>Use the example.csv file provided as reference</span></p>
+                        <p><span class="bold">Step 1:</span> Click on upload, and select your csv file from the popup
+                        </p>
+                        <hr>
+                        <img src="../static/tutorial_images/1. Choose_file.png" alt="choosefile box" width="100%"></img>
+                        <p><span class="bold">Step 2:</span> Repeat step 3 for single compound prediction but in the
+                            above
+                            block</p>
+                        <hr>
+                        <p><span class="bold">Step 3:</span> Results</p>
+                        <hr>
+                        <img src="../static/tutorial_images/2. Batch_results.png" alt="csv_result" width="100%"></img>
+                </div>
+            </section>
+    </div>
+
+</body>
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+</html>

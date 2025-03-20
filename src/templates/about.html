@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Malar-pred - FAQ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/about_style.css') }}">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-container">
+        <div class="header">
+            <h1>
+                <img src="{{ url_for('static', filename='/images/logo.jpg') }}" alt="logo" class="header-logo">
+            </h1>
+            <button class="hamburger" aria-label="Toggle menu" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="myLinks">
+                <ul class="hamburger-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/predict">Predict</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/tutorial">Tutorial</a></li>
+                    <li><a href="/about">FAQ's</a></li>
+                </ul>
+            </div>
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict">Predict</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/tutorial">Tutorial</a></li>
+                <li><a href="/about">FAQ's</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Frequently Asked Questions</h2>
+
+        <!-- FAQ Items -->
+        <div class="faq-item">
+            <button onclick="toggleFaq(this)">What is the function of AMA-1/RON2 interaction in malaria
+                development?</button>
+            <div class="faq-item-content">
+                The AMA-1/RON2 interaction facilitates the tight junction formation, which is essential for the invasion
+                of red blood cells by the Plasmodium parasite, a critical step in malaria infection.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button onclick="toggleFaq(this)">What is the number cap for batch prediction?</button>
+            <div class="faq-item-content">
+                The maximum number of compounds you can predict using batch prediction is 1000 compounds.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button onclick="toggleFaq(this)">How does Malar-pred ensure prediction accuracy?</button>
+            <div class="faq-item-content">
+                Malar-pred uses advanced machine learning models, trained on extensive datasets, to provide reliable and
+                accurate predictions for malaria-related research.
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Ask Your Question</h2>
+            <form method="GET" action="mailto:lampteyeugene8@gmail.com" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Question" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
